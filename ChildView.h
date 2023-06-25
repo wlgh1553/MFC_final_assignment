@@ -32,6 +32,9 @@ public:
 	bool is_moving;
 	CPoint catchPos; 
 
+	//그룹화
+	void DoGroup();
+	void DoUngroup();
 
 // 특성입니다.
 public:
@@ -64,5 +67,19 @@ public:
 	afx_msg void OnActionSelect();
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
 	afx_msg void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
+	afx_msg void OnActionGroup();
+	afx_msg void OnActionUngroup();
+	afx_msg void OnAlignBringfront();
+	afx_msg void OnAlignBrintback();
+	afx_msg void OnContextMenu(CWnd* /*pWnd*/, CPoint /*point*/);
+	afx_msg void OnUpdateRectMenu(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateCircleMenu(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateCurveMenu(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateStarMenu(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateSelectMenu(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateGroupMenu(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateUngroupMenu(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateBFMenu(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateBBMenu(CCmdUI* pCmdUI);
 };
 
